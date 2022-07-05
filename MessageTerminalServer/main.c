@@ -7,10 +7,8 @@
 #include "../Functions/Functions.h"
 
 int main(int argc, const char *argv[]) {
-    int port, server_fd, client_fd;
-    _Bool shouldRun = 1;
-    char inputBuffer[1024] = {0};
-    struct sockaddr_in serverAddress, clientAddress;
+    int port, server_fd, nrUsers = 2;
+    struct sockaddr_in serverAddress;
     
     //read configs
     FILE *convLog;
@@ -23,8 +21,9 @@ int main(int argc, const char *argv[]) {
     readArgumentsReturn = 0;
     printf("\n\n");
     
-    //run program
     server_fd = initializeSocket(port, &serverAddress);
+    
+    runServer(nrUsers, port, convLog, server_fd, serverAddress);
     
     //exit program
     fclose(convLog);

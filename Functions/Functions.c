@@ -37,3 +37,7 @@ FILE *openFile(const char *name, const char *mode) {
     }
     return file;
 }
+
+void resetMemory(void *block_address, int count, long unsigned int esize) {
+    memset(block_address, 0x00, esize * count);
+}

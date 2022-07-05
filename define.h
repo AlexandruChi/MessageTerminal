@@ -18,5 +18,7 @@
 #define __SOCKET_CONFIG_ERROR "\n\nCan't config socket\n"
 #define __SOCKET_CANT_OPEN_ERROR "\n\nCan't open socket\n"
 #define __SOCKET_CANT_ACCEPT_CONNECTIONS_ERROR "\n\nCan't accept connections\n"
+#define __CREATE_ATTR_ERROR "\n\nError creating attr\n"
+#define __CREATE_THREAD_ERROR "\n\nError creating thread %d\n"
 
 #endif /* define_h */

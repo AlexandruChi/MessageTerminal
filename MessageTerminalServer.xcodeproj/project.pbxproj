@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F512E78E287455F100ECB0BF /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F512E78D287455F100ECB0BF /* main.c */; };
+		F512E79C287471FB00ECB0BF /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F512E797287456FF00ECB0BF /* main.c */; };
+		F512E79E2874734000ECB0BF /* Server.c in Sources */ = {isa = PBXBuildFile; fileRef = F512E79D2874734000ECB0BF /* Server.c */; };
+		F512E7A02874735000ECB0BF /* Thread.c in Sources */ = {isa = PBXBuildFile; fileRef = F512E79F2874735000ECB0BF /* Thread.c */; };
+		F512E7A42874774400ECB0BF /* Arguments.c in Sources */ = {isa = PBXBuildFile; fileRef = F512E7A32874774400ECB0BF /* Arguments.c */; };
+		F512E7A82874789E00ECB0BF /* Functions.c in Sources */ = {isa = PBXBuildFile; fileRef = F512E7A72874789E00ECB0BF /* Functions.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +27,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F512E78A287455F100ECB0BF /* MessageTerminal */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MessageTerminal; sourceTree = BUILT_PRODUCTS_DIR; };
-		F512E78D287455F100ECB0BF /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F512E78A287455F100ECB0BF /* MessageTerminalServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MessageTerminalServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		F512E797287456FF00ECB0BF /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F512E79928746FAE00ECB0BF /* ServerInit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerInit.h; sourceTree = "<group>"; };
+		F512E79D2874734000ECB0BF /* Server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Server.c; sourceTree = "<group>"; };
+		F512E79F2874735000ECB0BF /* Thread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Thread.c; sourceTree = "<group>"; };
+		F512E7A32874774400ECB0BF /* Arguments.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Arguments.c; sourceTree = "<group>"; };
+		F512E7A62874789E00ECB0BF /* Functions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
+		F512E7A72874789E00ECB0BF /* Functions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Functions.c; sourceTree = "<group>"; };
+		F512E7A92874805000ECB0BF /* define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +52,10 @@
 		F512E781287455F100ECB0BF = {
 			isa = PBXGroup;
 			children = (
-				F512E78C287455F100ECB0BF /* MessageTerminal */,
+				F512E7A92874805000ECB0BF /* define.h */,
+				F512E7A52874787500ECB0BF /* Functions */,
+				F512E79828746F8F00ECB0BF /* ServerInit */,
+				F512E796287456FF00ECB0BF /* MessageTerminalServer */,
 				F512E78B287455F100ECB0BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +63,45 @@
 		F512E78B287455F100ECB0BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F512E78A287455F100ECB0BF /* MessageTerminal */,
+				F512E78A287455F100ECB0BF /* MessageTerminalServer */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F512E78C287455F100ECB0BF /* MessageTerminal */ = {
+		F512E796287456FF00ECB0BF /* MessageTerminalServer */ = {
 			isa = PBXGroup;
 			children = (
-				F512E78D287455F100ECB0BF /* main.c */,
+				F512E797287456FF00ECB0BF /* main.c */,
 			);
-			path = MessageTerminal;
+			path = MessageTerminalServer;
+			sourceTree = "<group>";
+		};
+		F512E79828746F8F00ECB0BF /* ServerInit */ = {
+			isa = PBXGroup;
+			children = (
+				F512E79928746FAE00ECB0BF /* ServerInit.h */,
+				F512E79D2874734000ECB0BF /* Server.c */,
+				F512E79F2874735000ECB0BF /* Thread.c */,
+				F512E7A32874774400ECB0BF /* Arguments.c */,
+			);
+			path = ServerInit;
+			sourceTree = "<group>";
+		};
+		F512E7A52874787500ECB0BF /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				F512E7A62874789E00ECB0BF /* Functions.h */,
+				F512E7A72874789E00ECB0BF /* Functions.c */,
+			);
+			path = Functions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F512E789287455F100ECB0BF /* MessageTerminal */ = {
+		F512E789287455F100ECB0BF /* MessageTerminalServer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F512E791287455F100ECB0BF /* Build configuration list for PBXNativeTarget "MessageTerminal" */;
+			buildConfigurationList = F512E791287455F100ECB0BF /* Build configuration list for PBXNativeTarget "MessageTerminalServer" */;
 			buildPhases = (
 				F512E786287455F100ECB0BF /* Sources */,
 				F512E787287455F100ECB0BF /* Frameworks */,
@@ -77,9 +111,9 @@
 			);
 			dependencies = (
 			);
-			name = MessageTerminal;
+			name = MessageTerminalServer;
 			productName = MessageTerminal;
-			productReference = F512E78A287455F100ECB0BF /* MessageTerminal */;
+			productReference = F512E78A287455F100ECB0BF /* MessageTerminalServer */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +130,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F512E785287455F100ECB0BF /* Build configuration list for PBXProject "MessageTerminal" */;
+			buildConfigurationList = F512E785287455F100ECB0BF /* Build configuration list for PBXProject "MessageTerminalServer" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +143,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F512E789287455F100ECB0BF /* MessageTerminal */,
+				F512E789287455F100ECB0BF /* MessageTerminalServer */,
 			);
 		};
 /* End PBXProject section */
@@ -119,7 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F512E78E287455F100ECB0BF /* main.c in Sources */,
+				F512E7A02874735000ECB0BF /* Thread.c in Sources */,
+				F512E79E2874734000ECB0BF /* Server.c in Sources */,
+				F512E7A82874789E00ECB0BF /* Functions.c in Sources */,
+				F512E7A42874774400ECB0BF /* Arguments.c in Sources */,
+				F512E79C287471FB00ECB0BF /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +292,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F512E785287455F100ECB0BF /* Build configuration list for PBXProject "MessageTerminal" */ = {
+		F512E785287455F100ECB0BF /* Build configuration list for PBXProject "MessageTerminalServer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F512E78F287455F100ECB0BF /* Debug */,
@@ -263,7 +301,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F512E791287455F100ECB0BF /* Build configuration list for PBXNativeTarget "MessageTerminal" */ = {
+		F512E791287455F100ECB0BF /* Build configuration list for PBXNativeTarget "MessageTerminalServer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F512E792287455F100ECB0BF /* Debug */,

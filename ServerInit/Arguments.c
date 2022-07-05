@@ -15,16 +15,23 @@ struct readArgumentsReturn *readArguments(int argc, const char *argv[], int *por
         printf("No arguments provided\n\nUsing default configurations\n\n%s\n\n", __HELP_ATRIBUTES);
         return Return;
     }
+    
     int flag_p = false, flag_o = false;
     for (int i = 1; i < argc; i++) {
         if (argv[i][0] == '-' and strlen(argv[i]) == 2) {
             if (argv[i][1] == 'p' and !flag_p) {
                 if (argv[i + 1][1] != '-' and isPozitivNumber(argv[i + 1])) {
-                    
+                    *port = atoi(argv[i + 1]);
+                    flag_p = true;
                 }
             }
             if (argv[i][1] == 'o' and !flag_o) {
-                
+                if (argv[i + 1][1] != '-') {
+                    free(Return->fileName);
+                    Return->fileName = 0;
+                    Return->fileName = allocateString(argv[i + 1]);
+                    flag_p = true;
+                }
             }
         }
     }

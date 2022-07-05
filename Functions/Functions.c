@@ -14,7 +14,7 @@ void *allocate(const size_t size) {
     return p;
 }
 
-char *allocateString(const char * string) {
+char *allocateString(const char *string) {
     char *s = (char*)allocate(sizeof(char) * (strlen(string) + 1));
     strcpy(s, string);
     return s;

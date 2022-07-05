@@ -13,5 +13,6 @@
 #define __DEFAULT_LOG_FILE "conversationLog.txt"
 
 #define __ALLLOCATE_ERROR "\n\nNot enough memory\n"
+#define __OPEN_FILE_ERROR "\n\nCan't open file %s\n"
 
 #endif /* define_h */

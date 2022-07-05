@@ -28,3 +28,12 @@ _Bool isPozitivNumber(const char *string) {
     }
     return true;
 }
+
+FILE *openFile(const char *name, const char *mode) {
+    FILE *file = fopen(name, mode);
+    if (!file) {
+        fprintf(stderr, __OPEN_FILE_ERROR, name);
+        exit(EXIT_FAILURE);
+    }
+    return file;
+}

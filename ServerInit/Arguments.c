@@ -12,7 +12,7 @@ struct readArgumentsReturn *readArguments(int argc, const char *argv[], int *por
     *port = __DEFAULT_PORT;
     
     if (argc == 1) {
-        printf("No arguments provided\n\nUsing default configurations\n\n%s\n\n", __HELP_ATRIBUTES);
+        printf("\nNo arguments provided\n\nUsing default configurations\n\n%s\n\n", __HELP_ATRIBUTES);
         return Return;
     }
     
@@ -30,7 +30,7 @@ struct readArgumentsReturn *readArguments(int argc, const char *argv[], int *por
                     free(Return->fileName);
                     Return->fileName = 0;
                     Return->fileName = allocateString(argv[i + 1]);
-                    flag_p = true;
+                    flag_o = true;
                 }
             }
         }

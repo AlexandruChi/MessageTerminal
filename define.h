@@ -5,7 +5,7 @@
 #define or ||
 
 #define true 1
-#define false 2
+#define false 0
 
 #define __HELP_ATRIBUTES "For asigning atributs run program using:\n\n    /MessageTerminalServer -p [port number] -o [output for conversation log]"
 
@@ -14,5 +14,9 @@
 
 #define __ALLLOCATE_ERROR "\n\nNot enough memory\n"
 #define __OPEN_FILE_ERROR "\n\nCan't open file %s\n"
+#define __SOCKET_CREATE_ERROR "\n\nCan't ceate socket\n"
+#define __SOCKET_CONFIG_ERROR "\n\nCan't config socket\n"
+#define __SOCKET_CANT_OPEN_ERROR "\n\nCan't open socket\n"
+#define __SOCKET_CANT_ACCEPT_CONNECTIONS_ERROR "\n\nCan't accept connections\n"
 
 #endif /* define_h */

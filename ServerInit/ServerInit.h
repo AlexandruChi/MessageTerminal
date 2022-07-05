@@ -6,5 +6,7 @@ struct readArgumentsReturn {
 };
 
 struct readArgumentsReturn *readArguments(int argc, const char *argv[], int *port);
+int initializeSocket(int port, struct sockaddr_in *server_address);
+void printConfigs(int port, char *fileName);
 
 #endif /* ServerInit_h */

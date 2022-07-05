@@ -15,6 +15,8 @@ int main(int argc, const char *argv[]) {
     
     struct readArgumentsReturn *readArgumentsReturn = readArguments(argc, argv, &port);
     
+    
+    
     free(readArgumentsReturn);
     readArgumentsReturn = 0;
     

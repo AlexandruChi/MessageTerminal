@@ -36,5 +36,9 @@ struct readArgumentsReturn *readArguments(int argc, const char *argv[], int *por
         }
     }
     
+    if (!(flag_p and flag_o)) {
+        printf("Not all valid arguments\n\nUsing some default configurations\n\n%s\n\n", __HELP_ATRIBUTES);
+    }
+    
     return Return;
 }

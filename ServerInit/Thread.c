@@ -58,6 +58,9 @@ void runServer(int num_threads, int port, FILE *log, int server_fd, struct socka
         while (*((tinfo + iter)->nrUsers) < 1) {
             pthread_cond_wait(&((tinfo + iter)->parent), &((tinfo + iter)->m));
         }
+        
+        printf("User %s connected [id: %d]\n", (tinfo + iter)->name, (tinfo + iter)->thread_num);
+        
         pthread_mutex_unlock(&((tinfo + iter)->m));
     }
     

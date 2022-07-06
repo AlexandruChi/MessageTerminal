@@ -6,6 +6,7 @@
 #include "ServerInit.h"
 #include "../Functions/Functions.h"
 #include "../define.h"
+#include "../MessageTerminalServer/ThreadInfo.h"
 
 void runServer(int num_threads, int port, FILE *log, int server_fd, struct sockaddr_in serverAddress) {
     pthread_attr_t attr;

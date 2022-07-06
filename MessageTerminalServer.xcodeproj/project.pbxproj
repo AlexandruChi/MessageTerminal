@@ -36,6 +36,7 @@
 		F512E7A62874789E00ECB0BF /* Functions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
 		F512E7A72874789E00ECB0BF /* Functions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Functions.c; sourceTree = "<group>"; };
 		F512E7A92874805000ECB0BF /* define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define.h; sourceTree = "<group>"; };
+		F5BFA1E12875B63D00E9EF48 /* ThreadInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadInfo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				F512E797287456FF00ECB0BF /* main.c */,
+				F5BFA1E12875B63D00E9EF48 /* ThreadInfo.h */,
 			);
 			path = MessageTerminalServer;
 			sourceTree = "<group>";

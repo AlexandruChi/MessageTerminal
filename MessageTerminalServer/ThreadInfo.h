@@ -7,6 +7,7 @@ typedef struct thread_info {
     int thread_num, client_fd, status;
     char *name;
     FILE *log;
+    int *nrUsers;
     
     pthread_cond_t self;
     pthread_cond_t parent;

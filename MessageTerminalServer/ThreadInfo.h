@@ -4,9 +4,9 @@
 typedef struct thread_info {
     pthread_t thread_id;
     
-    int thread_num, server_fd;
+    int thread_num, client_fd, status;
     char *name;
-    struct sockaddr_in serverAddress;
+    FILE *log;
     
     pthread_cond_t self;
     pthread_cond_t parent;

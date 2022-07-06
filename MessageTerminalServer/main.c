@@ -21,8 +21,8 @@ int main(int argc, const char *argv[]) {
     readArgumentsReturn = 0;
     printf("\n\n");
     
+    //start server
     server_fd = initializeSocket(port, &serverAddress);
-    
     runServer(nrUsers, port, convLog, server_fd, serverAddress);
     
     //exit program

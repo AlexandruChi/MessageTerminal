@@ -20,5 +20,6 @@
 #define __SOCKET_CANT_ACCEPT_CONNECTIONS_ERROR "\n\nCan't accept connections\n"
 #define __CREATE_ATTR_ERROR "\n\nError creating attr\n"
 #define __CREATE_THREAD_ERROR "\n\nError creating thread %d\n"
+#define __GET_CLIENT_ERROR "\n\nError conecting to client\n"
 
 #endif /* define_h */

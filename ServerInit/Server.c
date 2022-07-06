@@ -33,11 +33,23 @@ int initializeSocket(int port, struct sockaddr_in *server_address) {
         exit(EXIT_FAILURE);
     }
     
-    if (listen(server_fd, 1)) {
+    if (listen(server_fd, 1) < 0) {
         fprintf(stderr, __SOCKET_CANT_ACCEPT_CONNECTIONS_ERROR);
         exit(EXIT_FAILURE);
     }
     
     return server_fd;
     
+}
+
+int getClient(int server_fd, struct sockaddr_in server_address, struct sockaddr_in *client_address) {
+    int client_fd, address_lenght = (int)sizeof(server_address);
+    
+    client_fd = accept(server_fd, (struct sockaddr*)&client_address, (socklen_t*)&address_lenght);
+    if (client_fd < 0) {
+        fprintf(stderr, __GET_CLIENT_ERROR);
+        exit(EXIT_FAILURE);
+    }
+    
+    return client_fd;
 }

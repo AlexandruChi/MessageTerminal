@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <netinet/in.h>
 #include <pthread.h>
+#include <unistd.h>
+#include <string.h>
 
 #include "ServerInit.h"
 #include "../Functions/Functions.h"
@@ -9,6 +11,7 @@
 #include "../MessageTerminalServer/ThreadInfo.h"
 
 void runServer(int num_threads, int port, FILE *log, int server_fd, struct sockaddr_in serverAddress) {
+    struct sockaddr_in clientAddress;
     pthread_attr_t attr;
     THREAD_INFO *tinfo = 0;
     int rcode;
@@ -26,6 +29,11 @@ void runServer(int num_threads, int port, FILE *log, int server_fd, struct socka
     
     for (int iter = 0; iter < num_threads; iter++) {
         (tinfo + iter)->thread_num = iter;
+        (tinfo + iter)->status = 0;
+        (tinfo + iter)->log = log;
+        
+        printf("Connection nr. %d sering up\n", (tinfo + iter)->thread_num);
+        (tinfo + iter)->client_fd = getClient(server_fd, serverAddress, &clientAddress);
         
         (tinfo + iter)->self = (pthread_cond_t)PTHREAD_COND_INITIALIZER;
         (tinfo + iter)->parent = (pthread_cond_t)PTHREAD_COND_INITIALIZER;
@@ -44,5 +52,18 @@ void runServer(int num_threads, int port, FILE *log, int server_fd, struct socka
 }
 
 void *mainThread(void *arg) {
+    THREAD_INFO *ptr_tinfo = (THREAD_INFO*)arg;
+    char buffer[2048] = {0};
+    long messageSize;
+    
+    printf("Connection nr. %d created\n", ptr_tinfo->thread_num);
+    
+    send(ptr_tinfo->client_fd, "Enter name: ",13 , 0);
+    
+    messageSize = read(ptr_tinfo->client_fd, buffer, 2048);
+    
+    ptr_tinfo->name = (char*)allocate((strlen(buffer) + 1) * sizeof(char));
+    strcpy(ptr_tinfo->name, buffer);
+        
     return 0;
 }

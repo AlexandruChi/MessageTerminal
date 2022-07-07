@@ -6,6 +6,7 @@
 #include "../ServerInit/ServerInit.h"
 #include "../Functions/Functions.h"
 
+//  Server
 int main(int argc, const char *argv[]) {
     int port, server_fd, nrUsers = 2;
     struct sockaddr_in serverAddress;

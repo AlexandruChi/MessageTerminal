@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/alexandruchiriac/MessageTerminal/MessageTerminalServer.xcodeproj">
+      location = "self:/Users/alexandruchiriac/MessageTerminalServer/MessageTerminal.xcodeproj">
    </FileRef>
 </Workspace>

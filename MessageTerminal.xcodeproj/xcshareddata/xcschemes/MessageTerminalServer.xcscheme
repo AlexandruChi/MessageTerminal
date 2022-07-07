@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F512E789287455F100ECB0BF"
                BuildableName = "MessageTerminalServer"
-               BlueprintName = "MessageTerminalServer"
-               ReferencedContainer = "container:MessageTerminalServer.xcodeproj">
+               BlueprintName = "MessageTerminal"
+               ReferencedContainer = "container:MessageTerminal.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,8 +47,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F512E789287455F100ECB0BF"
             BuildableName = "MessageTerminalServer"
-            BlueprintName = "MessageTerminalServer"
-            ReferencedContainer = "container:MessageTerminalServer.xcodeproj">
+            BlueprintName = "MessageTerminal"
+            ReferencedContainer = "container:MessageTerminal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,8 +64,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F512E789287455F100ECB0BF"
             BuildableName = "MessageTerminalServer"
-            BlueprintName = "MessageTerminalServer"
-            ReferencedContainer = "container:MessageTerminalServer.xcodeproj">
+            BlueprintName = "MessageTerminal"
+            ReferencedContainer = "container:MessageTerminal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

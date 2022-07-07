@@ -19,6 +19,7 @@ void runServer(int num_threads, int port, FILE *log, int server_fd, struct socka
     pthread_attr_t attr;
     THREAD_INFO *tinfo = 0;
     int rcode, nrUsers = 0;
+//  _Bool shouldRun = 1;
     
     printf("Seting up connections for %d users\n\n", num_threads);
     rcode = pthread_attr_init(&attr);

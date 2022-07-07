@@ -93,8 +93,8 @@
 		F512E796287456FF00ECB0BF /* MessageTerminalServer */ = {
 			isa = PBXGroup;
 			children = (
-				F512E797287456FF00ECB0BF /* main.c */,
 				F5BFA1E12875B63D00E9EF48 /* ThreadInfo.h */,
+				F512E797287456FF00ECB0BF /* main.c */,
 			);
 			path = MessageTerminalServer;
 			sourceTree = "<group>";

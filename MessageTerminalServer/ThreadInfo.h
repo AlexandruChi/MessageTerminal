@@ -14,7 +14,7 @@ typedef struct thread_info {
     pthread_mutex_t m;
 } THREAD_INFO;
 
-typedef struct thread_client_info {
+typedef struct thread_server_info {
     pthread_t thread_id;
     
     int thread_num;
@@ -22,6 +22,6 @@ typedef struct thread_client_info {
     pthread_cond_t self;
     pthread_cond_t parent;
     pthread_mutex_t m;
-} THREAD_CLIENT_INFO;
+} THREAD_SERVER_INFO;
 
 #endif /* ThreadInfo_h */

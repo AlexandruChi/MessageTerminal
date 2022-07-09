@@ -7,7 +7,7 @@
 #define true 1
 #define false 0
 
-#define __HELP_ATRIBUTES "For asigning atributs run program using:\n\n    /MessageTerminalServer -p [port number] -o [output for conversation log]"
+typedef _Bool bool;
 
 #define __DEFAULT_PORT 4092
 #define __DEFAULT_LOG_FILE "conversationLog.txt"

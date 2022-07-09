@@ -9,6 +9,7 @@
 #include "../Functions/Functions.h"
 #include "../define.h"
 #include "../MessageTerminalServer/ThreadInfo.h"
+#include "../DataStructures/DataStructures.h"
 
 #define enter_name "Enter name: "
 #define waiting_for_users "Waiting for users to connect"

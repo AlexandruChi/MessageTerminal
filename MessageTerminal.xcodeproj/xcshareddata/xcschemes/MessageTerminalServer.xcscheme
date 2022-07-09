@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F512E789287455F100ECB0BF"
-               BuildableName = "MessageTerminal"
+               BuildableName = "MessageTerminalServer"
                BlueprintName = "MessageTerminalServer"
                ReferencedContainer = "container:MessageTerminal.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F512E789287455F100ECB0BF"
-            BuildableName = "MessageTerminal"
+            BuildableName = "MessageTerminalServer"
             BlueprintName = "MessageTerminalServer"
             ReferencedContainer = "container:MessageTerminal.xcodeproj">
          </BuildableReference>
@@ -63,7 +63,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F512E789287455F100ECB0BF"
-            BuildableName = "MessageTerminal"
+            BuildableName = "MessageTerminalServer"
             BlueprintName = "MessageTerminalServer"
             ReferencedContainer = "container:MessageTerminal.xcodeproj">
          </BuildableReference>

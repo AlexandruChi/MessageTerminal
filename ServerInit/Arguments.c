@@ -6,6 +6,8 @@
 #include "ServerInit.h"
 #include "../Functions/Functions.h"
 
+#define __HELP_ATRIBUTES "For asigning atributs run program using:\n\n    /MessageTerminalServer -p [port number] -o [output for conversation log]"
+
 struct readArgumentsReturn *readArguments(int argc, const char *argv[], int *port) {
     struct readArgumentsReturn *Return = (struct readArgumentsReturn*)allocate(sizeof(struct readArgumentsReturn));
     Return->fileName = allocateString(__DEFAULT_LOG_FILE);

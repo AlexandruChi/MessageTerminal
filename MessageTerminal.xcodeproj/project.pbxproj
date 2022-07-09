@@ -13,6 +13,7 @@
 		F512E7A42874774400ECB0BF /* Arguments.c in Sources */ = {isa = PBXBuildFile; fileRef = F512E7A32874774400ECB0BF /* Arguments.c */; };
 		F512E7A82874789E00ECB0BF /* Functions.c in Sources */ = {isa = PBXBuildFile; fileRef = F512E7A72874789E00ECB0BF /* Functions.c */; };
 		F54E64262877168300E5AB8A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F54E64252877168300E5AB8A /* main.c */; };
+		F5ABA7A32879E16B00DF8588 /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = F5ABA7A22879E16B00DF8588 /* list.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,9 @@
 		F512E7A92874805000ECB0BF /* define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define.h; sourceTree = "<group>"; };
 		F54E64232877168300E5AB8A /* MessageTerminalClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MessageTerminalClient; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54E64252877168300E5AB8A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F5ABA7A02879E0F400DF8588 /* DataStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataStructures.h; sourceTree = "<group>"; };
+		F5ABA7A12879E16B00DF8588 /* list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
+		F5ABA7A22879E16B00DF8588 /* list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = list.c; sourceTree = "<group>"; };
 		F5BFA1E12875B63D00E9EF48 /* ThreadInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadInfo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				F512E7A92874805000ECB0BF /* define.h */,
+				F5ABA79F2879E09B00DF8588 /* DataStructures */,
 				F512E7A52874787500ECB0BF /* Functions */,
 				F512E79828746F8F00ECB0BF /* ServerInit */,
 				F512E796287456FF00ECB0BF /* MessageTerminalServer */,
@@ -125,6 +130,16 @@
 				F54E64252877168300E5AB8A /* main.c */,
 			);
 			path = MessageTerminalClient;
+			sourceTree = "<group>";
+		};
+		F5ABA79F2879E09B00DF8588 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				F5ABA7A02879E0F400DF8588 /* DataStructures.h */,
+				F5ABA7A12879E16B00DF8588 /* list.h */,
+				F5ABA7A22879E16B00DF8588 /* list.c */,
+			);
+			path = DataStructures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +223,7 @@
 				F512E7A02874735000ECB0BF /* Thread.c in Sources */,
 				F512E79E2874734000ECB0BF /* Server.c in Sources */,
 				F512E7A82874789E00ECB0BF /* Functions.c in Sources */,
+				F5ABA7A32879E16B00DF8588 /* list.c in Sources */,
 				F512E7A42874774400ECB0BF /* Arguments.c in Sources */,
 				F512E79C287471FB00ECB0BF /* main.c in Sources */,
 			);

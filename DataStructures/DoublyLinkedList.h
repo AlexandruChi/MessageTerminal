@@ -3,12 +3,14 @@
 
 struct __DOUBLY_LINKED_LIST_NODE {
     void *data;
-    struct __DOUBLY_LINKED_LIST_NODE *prev, *next;
+    struct __DOUBLY_LINKED_LIST__NODE *prev, *next;
 };
 
 typedef struct __DOUBLY_LINKED_LIST {
-    struct __DOUBLY_LINKED_LIST_NODE *start, *end;
-    
+    struct {
+        struct __DOUBLY_LINKED_LIST_NODE *start, *end;
+    } node;
+    void (*create)(struct __DOUBLY_LINKED_LIST);
 } DoublyLinkedList;
 
 #endif /* list_h */
